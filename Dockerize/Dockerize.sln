@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dockerize", "Dockerize\Dockerize.csproj", "{8196514B-E9E9-4E5A-9456-710FE1C368A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dockerize.Core", "Dockerize.Core\Dockerize.Core.csproj", "{20E36434-5BE2-40F8-AE8E-6A929FEF3899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8196514B-E9E9-4E5A-9456-710FE1C368A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8196514B-E9E9-4E5A-9456-710FE1C368A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8196514B-E9E9-4E5A-9456-710FE1C368A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E36434-5BE2-40F8-AE8E-6A929FEF3899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E36434-5BE2-40F8-AE8E-6A929FEF3899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E36434-5BE2-40F8-AE8E-6A929FEF3899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E36434-5BE2-40F8-AE8E-6A929FEF3899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
