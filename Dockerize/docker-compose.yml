@@ -1,0 +1,47 @@
+version: '3.6'
+
+services:
+  dotnetcore:
+    image: dotnetcore
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 57877:80
+    depends_on:
+      - sqldata
+    networks:
+      sql-network:
+        aliases:
+          - dotnetcore.sql.data
+
+  sqldata:
+    image: microsoft/mssql-server-linux
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password
+    ports:
+      - 1433:1433
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    networks:
+      sql-network:
+        aliases:
+          - dotnetcore.sql.data
+    volumes:
+      - sql-data:/var/lib/sqldata/data
+
+networks:
+  sql-network:
+    driver: bridge
+
+volumes:
+  sql-data:

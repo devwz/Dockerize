@@ -23,3 +23,13 @@ docker build -t dotnetcore .
 
 docker run -d -p 57877:80 --link sqldata --name dotnetcore dotnetcore
 ```
+
+## Docker-Compose
+
+Adicione o yml na pasta da solução
+
+```sh
+docker-compose build
+
+docker-compose up -d
+```
