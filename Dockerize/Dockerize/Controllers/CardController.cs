@@ -75,7 +75,7 @@ namespace Dockerize.Controllers
 
             if (card == null)
             {
-                NotFound();
+                return NotFound();
             }
 
             context.CardContext.Remove(card);
